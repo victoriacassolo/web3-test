@@ -1,20 +1,43 @@
 {
   "compilerOptions": {
+    // specify ECMAScript target version
     "target": "es5",
+    // specify libraries to include in compilation
     "lib": ["dom", "dom.iterable", "esnext"],
+    // allow js filesto be compiled
     "allowJs": true,
+    // skip warnings to lib
     "skipLibCheck": true,
+    // habilita funções para mostrar erros de código
     "strict": false,
+    // não permite arquivos sem casing sensitive
     "forceConsistentCasingInFileNames": true,
+    // dont emit output files in JavaScript
     "noEmit": true,
+    // permite compatibilidade entre módulos
     "esModuleInterop": true,
+    // the output module type
     "module": "esnext",
+    // determine how modules get resolved | forma que vai encontrar um módulo no meu projeto
     "moduleResolution": "node",
+    // permite importar um JSON em um arquivo
     "resolveJsonModule": true,
+    // Transpile each file as a separate module
     "isolatedModules": true,
+    // Specify JSX code generation
     "jsx": "preserve",
-    "incremental": true
+
+    "incremental": true,
+    "baseUrl": ".",
+    // path to facilite commands
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["hooks/*"]
+    }
   },
+  // onde o compilador vai olhar, só pra pasta source
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  // onde o compilador vai pular
   "exclude": ["node_modules"]
 }
