@@ -1,5 +1,5 @@
 {
-  "name": "next-web3-boilerplate",
+  "name": "web3-next-chakra-template",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,8 @@
     "postinstall": "yarn compile-contract-types"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@chakra-ui/icons": "^2.0.2",
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
@@ -27,6 +29,7 @@
     "next": "^12.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "styled-components": "^5.3.5",
     "swr": "^1.2.0"
   },
   "devDependencies": {
