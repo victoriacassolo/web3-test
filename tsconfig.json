@@ -9,11 +9,11 @@
     // skip warnings to lib
     "skipLibCheck": true,
     // habilita funções para mostrar erros de código
-    "strict": false,
+    "strict": true,
     // não permite arquivos sem casing sensitive
     "forceConsistentCasingInFileNames": true,
     // dont emit output files in JavaScript
-    "noEmit": true,
+    "noEmit": false,
     // permite compatibilidade entre módulos
     "esModuleInterop": true,
     // the output module type
