@@ -5,6 +5,7 @@ import {
   HStack,
   Link,
   IconButton,
+  Text,
   Button,
   Menu,
   MenuButton,
@@ -19,6 +20,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { DarkModeSwitch } from '@components/DarkModeSwitch';
 import Account from '@components/Account';
 import useEagerConnect from '../../hooks/useEagerConnect';
+import Logo from './Logo';
 
 const Links = ['Dashboard', 'Projects', 'Team'];
 
@@ -53,7 +55,9 @@ export default function NavBar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <Box>
+              <Logo />
+            </Box>
             <HStack
               as={'nav'}
               spacing={4}
@@ -65,9 +69,11 @@ export default function NavBar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
+            <Text mr={5}>
+              <Account triedToEagerConnect={triedToEagerConnect} />
+            </Text>
             <DarkModeSwitch />
-            <Account triedToEagerConnect={triedToEagerConnect} />
-            <Menu>
+            {/* <Menu>
               <MenuButton
                 as={Button}
                 rounded={'full'}
@@ -83,7 +89,7 @@ export default function NavBar() {
                 <MenuDivider />
                 <MenuItem>Link 3</MenuItem>
               </MenuList>
-            </Menu>
+            </Menu> */}
           </Flex>
         </Flex>
 
