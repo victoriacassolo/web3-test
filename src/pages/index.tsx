@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Heading, VStack } from '@chakra-ui/react';
+import { Container, Heading, VStack, Button } from '@chakra-ui/react';
 import { useWeb3React } from '@web3-react/core';
 import Head from 'next/head'; // alterações no cabecalho específico por página
 import ETHBalance from '@components/ETHBalance';
@@ -26,7 +26,6 @@ function Home() {
             Welcome to{' '}
             <a href="https://github.com/mirshko/next-web3-boilerplate">WEB3</a>
           </Heading>
-
           {isConnected && (
             <>
               <ETHBalance />
