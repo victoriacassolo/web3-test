@@ -69,27 +69,23 @@ export default function NavBar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Text mr={5}>
-              <Account triedToEagerConnect={triedToEagerConnect} />
-            </Text>
             <DarkModeSwitch />
-            {/* <Menu>
+            <Menu>
               <MenuButton
                 as={Button}
                 rounded={'full'}
                 variant={'link'}
                 cursor={'pointer'}
                 minW={0}
+                ml={3}
               >
-                Menu
+                <Account triedToEagerConnect={triedToEagerConnect} />
               </MenuButton>
               <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
+                {/* <MenuDivider /> */}
+                <MenuItem>Logout</MenuItem>
               </MenuList>
-            </Menu> */}
+            </Menu>
           </Flex>
         </Flex>
 

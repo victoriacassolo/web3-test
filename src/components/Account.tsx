@@ -5,7 +5,7 @@ import { injected } from '../../connectors';
 import useENSName from '@hooks/useENSName';
 import useMetaMaskOnboarding from '@hooks/useMetaMaskOnboarding';
 import { formatEtherscanLink, shortenHex } from '../../util';
-import { Button } from '@chakra-ui/react';
+import { Button, Text } from '@chakra-ui/react';
 
 type AccountProps = {
   triedToEagerConnect: boolean;
@@ -70,15 +70,16 @@ const Account = ({ triedToEagerConnect }: AccountProps) => {
   }
 
   return (
-    <a
-      {...{
-        href: formatEtherscanLink('Account', [chainId, account]),
-        target: '_blank',
-        rel: 'noopener noreferrer',
-      }}
-    >
-      {ENSName || `${shortenHex(account, 4)}`}
-    </a>
+    // <a
+    //   {...{
+    //     href: formatEtherscanLink('Account', [chainId, account]),
+    //     target: '_blank',
+    //     rel: 'noopener noreferrer',
+    //   }}
+    // >
+    //   {ENSName || `${shortenHex(account, 4)}`}
+    // </a>
+    <Text>{ENSName || `${shortenHex(account, 4)}`}</Text>
   );
 };
 
